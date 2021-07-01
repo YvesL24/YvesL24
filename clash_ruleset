@@ -1,1 +1,112 @@
+[custom]
+;Yves规则
+
+;去广告：支持
+;自动测速：支持
+;微软分流：支持
+;苹果分流：支持
+;增强中国IP段：不支持
+;增强国外GFW：不支持
+
+surge_ruleset=🇨🇳 国内网站,rules/ZHANG/LocalAreaNetwork.list
+surge_ruleset=🛑 全球拦截,rules/ZHANG/QuanQiuLanJie.list
+surge_ruleset=⛔ 应用拦截,rules/ZHANG/YingYongLanJie.list
+surge_ruleset=🎮 游戏平台,rules/ZHANG/YouXiPingTai.list
+surge_ruleset=🧩 微软服务,rules/ZHANG/WeiRuanFuWu.list
+surge_ruleset=🍎 苹果服务,rules/ZHANG/PingGuoFuWu.list
+surge_ruleset=📲 聊天软件,rules/ZHANG/LiaoTianRuanJian.list
+surge_ruleset=🌍 国外媒体,rules/ZHANG/GuoWaiMeiTi_2.list
+surge_ruleset=📺 巴哈姆特,rules/ZHANG/BaHaMuTe.list
+surge_ruleset=📹 YouTube,rules/ZHANG/YOUTUBE.list
+surge_ruleset=🎥 NETFLIX,rules/ZHANG/NETFLIX.list
+surge_ruleset=🎵 TikTok,rules/ZHANG/TikTok.list
+surge_ruleset=🎬 Prime,rules/ZHANG/PrimeVideo.list
+surge_ruleset=👪 DisneyPlus,rules/ZHANG/DisneyPlus.list
+surge_ruleset=🎬 HBO,rules/ZHANG/HBO.list
+surge_ruleset=🎬 Spotify,rules/ZHANG/Spotify.list
+surge_ruleset=⛩ 日韩媒体,rules/ZHANG/RiHanMeiTi.list
+surge_ruleset=🌏 港台媒体,rules/ZHANG/GangTaiMeiTI_2.list
+surge_ruleset=📺 哔哩哔哩,rules/ZHANG/BilibiliHMT.list
+surge_ruleset=📺 爱奇艺,rules/ZHANG/IqiyiHMT.list
+surge_ruleset=🇧🇹 BT&PT,rules/ZHANG/PrivateTracker.list
+surge_ruleset=🇺🇳 国外网站,rules/ZHANG/GuoWaiWangZhan.list
+surge_ruleset=🇨🇳 国内网站,rules/ZHANG/GuoNeiWangZhan.list
+surge_ruleset=🇨🇳 国内网站,[]GEOIP,CN
+surge_ruleset=🐟 漏网之鱼,[]FINAL
+
+custom_proxy_group=🇨🇳 台湾总集--测速`select`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]DIRECT
+custom_proxy_group=🇨🇳 台湾总集--手选`select`(台|台湾)
+custom_proxy_group=🇨🇳 台湾节点`url-test`(台|台湾)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇨🇳 台湾IEPL`url-test`(IEPL.*台)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇨🇳 台湾IPLC`url-test`(IPLC.*台)`http://www.gstatic.com/generate_204`300,,100
+
+custom_proxy_group=🇯🇵 日本总集--测速`select`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]DIRECT
+custom_proxy_group=🇯🇵 日本总集--手选`select`(日|日本)
+custom_proxy_group=🇯🇵 日本节点`url-test`(?!.*(限速&禁视频)).*(日|日本)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇯🇵 日本IEPL`url-test`(?!.*(限速&禁视频)).*(IEPL.*日)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇯🇵 日本IPLC`url-test`(IPLC.*日)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇯🇵 日本Trojan`url-test`(?!.*(AGA)).*(Trojan.*日)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇯🇵 日本AGA`url-test`(日.*AGA)`http://www.gstatic.com/generate_204`300,,100
+
+custom_proxy_group=🇺🇲 美国总集--测速`select`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]DIRECT
+custom_proxy_group=🇺🇲 美国总集--手选`select`(美|美国)
+custom_proxy_group=🇺🇲 美国节点`url-test`(美|美国)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇺🇲 美国IEPL`url-test`(IEPL.*美)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇺🇲 美国IPLC`url-test`(IPLC.*美)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇺🇲 美国Trojan`url-test`(?!.*(AGA)).*(Trojan.*美)`http://www.gstatic.com/generate_204`300,,100  
+custom_proxy_group=🇺🇲 美国AGA`url-test`(美.*AGA)`http://www.gstatic.com/generate_204`300,,100
+
+custom_proxy_group=🇭🇰 香港总集--测速`select`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]DIRECT
+custom_proxy_group=🇭🇰 香港总集--手选`select`(?!.*(美国|新加坡)).*(港|香港)
+custom_proxy_group=🇭🇰 香港节点`url-test`(?!.*(美国|新加坡)).*(港|香港)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇭🇰 香港IEPL`url-test`(IEPL.*港)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇭🇰 香港IPLC`url-test`(IPLC.*港)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇭🇰 香港Trojan`url-test`(Trojan.*港)`http://www.gstatic.com/generate_204`300,,100
+
+custom_proxy_group=🇸🇬 狮城总集--测速`select`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]DIRECT
+custom_proxy_group=🇸🇬 狮城总集--手选`select`(新|新加坡)
+custom_proxy_group=🇸🇬 狮城节点`url-test`(新|新加坡)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇸🇬 狮城IEPL`url-test`(IEPL.*新)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇸🇬 狮城IPLC`url-test`(IPLC.*新)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇸🇬 狮城Trojan`url-test`(Trojan.*新)`http://www.gstatic.com/generate_204`300,,100
+
+custom_proxy_group=🇰🇷 韩国总集--测速`select`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]DIRECT
+custom_proxy_group=🇰🇷 韩国总集--手选`select`(韩|韩国)
+custom_proxy_group=🇰🇷 韩国节点`url-test`(韩|韩国)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇰🇷 韩国Trojan`url-test`(?!.*(AGA)).*(Trojan.*韩)`http://www.gstatic.com/generate_204`300,,100
+custom_proxy_group=🇰🇷 韩国AGA`url-test`(韩.*AGA)`http://www.gstatic.com/generate_204`300,,100
+
+custom_proxy_group=🌍 其他地区--手选`select`(俄|印|德|英|土|阿|拿|菲|澳)
+
+custom_proxy_group=♻️ 手动切换1`select`.*
+custom_proxy_group=♻️ 手动切换2`select`.*
+custom_proxy_group=♻️ 手动切换3`select`.*
+
+custom_proxy_group=🍎 苹果服务`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🧩 微软服务`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=📲 聊天软件`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=📺 巴哈姆特`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=📹 YouTube`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🎥 NETFLIX`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🎵 TikTok`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🎬 Prime`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=👪 DisneyPlus`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🎬 Spotify`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🎬 HBO`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=⛩ 日韩媒体`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🌍 国外媒体`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🌏 港台媒体`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=📺 哔哩哔哩`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=📺 爱奇艺`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🇧🇹 BT&PT`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🇺🇳 国外网站`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🇨🇳 国内网站`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🎮 游戏平台`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🐟 漏网之鱼`select`[]DIRECT`[]🇨🇳 台湾总集--测速`[]🇨🇳 台湾总集--手选`[]🇨🇳 台湾节点`[]🇨🇳 台湾IEPL`[]🇨🇳 台湾IPLC`[]🇯🇵 日本总集--测速`[]🇯🇵 日本总集--手选`[]🇯🇵 日本节点`[]🇯🇵 日本IEPL`[]🇯🇵 日本IPLC`[]🇯🇵 日本Trojan`[]🇯🇵 日本AGA`[]🇺🇲 美国总集--测速`[]🇺🇲 美国总集--手选`[]🇺🇲 美国节点`[]🇺🇲 美国IEPL`[]🇺🇲 美国IPLC`[]🇺🇲 美国Trojan`[]🇺🇲 美国AGA`[]🇭🇰 香港总集--测速`[]🇭🇰 香港总集--手选`[]🇭🇰 香港节点`[]🇭🇰 香港IEPL`[]🇭🇰 香港IPLC`[]🇭🇰 香港Trojan`[]🇸🇬 狮城总集--测速`[]🇸🇬 狮城总集--手选`[]🇸🇬 狮城节点`[]🇸🇬 狮城IEPL`[]🇸🇬 狮城IPLC`[]🇸🇬 狮城Trojan`[]🇰🇷 韩国总集--测速`[]🇰🇷 韩国总集--手选`[]🇰🇷 韩国节点`[]🇰🇷 韩国Trojan`[]🇰🇷 韩国AGA`[]🌍 其他地区--手选`[]♻️ 手动切换1`[]♻️ 手动切换2`[]♻️ 手动切换3
+custom_proxy_group=🛑 全球拦截`select`[]REJECT`[]DIRECT
+custom_proxy_group=⛔ 应用拦截`select`[]REJECT`[]DIRECT
+
+enable_rule_generator=true
+overwrite_original_rules=true
+
 
